@@ -1,0 +1,1142 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1320px;
+}
+
+.title {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 60px;
+    align-items: baseline;
+}
+
+.title .circleBox {
+    width: 23px;
+    height: 23px;
+    position: relative;
+}
+
+.title .circle {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 2px solid #f99d1c;
+    box-shadow: 2px 0 0;
+    border-radius: 25px;
+}
+
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #f99d1c;
+    position: fixed;
+    background: #fff;
+    z-index: 9999;
+}
+
+header .itemCont {
+    width: 1200px;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+header .itemCont .logo img {
+    width: 150px;
+}
+
+header .itemCont .item {
+    display: flex;
+    gap: 40px;
+}
+
+header a {
+    color: #333;
+}
+
+header .item a {
+    font-weight: bolder;
+    padding: 10px 20px;
+}
+
+header .item li {
+    position: relative;
+}
+
+header .item li::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    top: 28px;
+    transform: scaleX(0);
+    transition: all .25s;
+}
+
+header .item li:hover::before {
+    transform: scaleX(1);
+}
+
+header .logout {
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+}
+
+header .line {
+    width: 1px;
+    height: 15px;
+    background: #f99d1c;
+}
+
+/* 비주얼 */
+.visual {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.visual .imgSlider {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: imgslide 9s linear infinite;
+}
+
+.visual .slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.visual .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual .font {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.visual .text {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    top: 250px;
+    font-size: 30px;
+}
+
+.visual .text p:first-child {
+    font-size: 24px;
+}
+
+@keyframes imgslide {
+    0% {
+        margin-left: 0;
+    }
+
+    22.5% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    47.5% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    72.5% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    97.5% {
+        margin-left: -300%;
+    }
+
+    99.999% {
+        margin-left: -400%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+.visual .txt {
+    position: absolute;
+    color: #bbbbbb;
+    top: 550px;
+    font-size: 24px;
+    left: 200px;
+}
+
+/* 인퍼메이션 */
+.info .box {
+    display: flex;
+    gap: 40px;
+}
+
+.info .content1 {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info .content1 img {
+    width: 400px;
+}
+
+.info .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.info .content2 .tit {
+    font-size: 24px;
+    color: #898989;
+    font-weight: bolder;
+}
+
+.info .content2 .item {
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+
+.info .content2 a {
+    color: #fff;
+    padding: 15px 40px;
+    background: #333;
+    border-radius: 35px;
+}
+
+.info .content2 img {
+    width: 260px;
+}
+
+/* 게임 스케듈 */
+.game .calendar {
+    width: 580px;
+    border: 1px solid #898989;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game .calendar .data {
+    width: 500px;
+}
+
+.game .weeks {
+    display: flex;
+    border-bottom: 1px solid #898989;
+}
+
+.game .weeks .day {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    color: #898989;
+}
+
+.game .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.game .days label {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.game .days label:hover {
+    background: #e4e4e4;
+}
+
+.game .days .today {
+    background: #e4e4e4;
+}
+
+.game .g {
+    border-bottom: 1px solid red;
+}
+
+.game .tit {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #898989;
+    margin-bottom: 30px;
+}
+
+.game .backdrop {
+    transform: translate(100%);
+    inset: 0;
+    position: fixed;
+    background: #00000072;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game .backdrop .modal {
+    background: #fff;
+    border-radius: 25px;
+    width: 400px;
+    transform: scale(0.1);
+    transition: all .25s;
+    padding: 20px;
+}
+
+.game .backdrop .button {
+    display: flex;
+    justify-content: end;
+}
+
+.game .backdrop .button label {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 0px 20px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.game .backdrop .button label:hover {
+    background: #333;
+    color: #fff;
+}
+
+.game .backdrop .mgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.game .backdrop img {
+    width: 100px;
+}
+
+.game #modal:checked~.backdrop {
+    transform: translate(0);
+}
+
+.game #modal:checked~.backdrop .modal {
+    transform: scale(1);
+}
+
+.game .back {
+    display: flex;
+    width: 40%;
+    margin-top: 50px;
+    justify-content: space-between;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+}
+
+.game .back .team {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.game .back .team img {
+    width: 100px;
+}
+
+.game .back .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.game .back .text .goal {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.game .back .goal .line {
+    width: 100px;
+    height: 1px;
+    background: #333;
+}
+
+input {
+    display: none;
+}
+
+
+/* 랭킹 */
+.ranking .box1 {
+    text-align: center;
+    height: 700px;
+}
+
+.ranking .main label {
+    display: inline-block;
+    padding: 10px 120px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 15px 15px 0 0;
+}
+
+.ranking .line {
+    width: 100%;
+    height: 1px;
+    background: #333;
+}
+
+.ranking .sub label {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 18px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.ranking .items {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ranking .ren {
+    width: 300px;
+    background: #e4e4e4;
+    word-spacing: 50px;
+    font-size: 18px;
+}
+
+.ranking .ren p {
+    line-height: 60px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.ranking .box1 .item {
+    display: none;
+}
+
+#league1:checked~.box1 [for="league1"] {
+    background: #333;
+    color: #fff;
+}
+
+#league2:checked~.box1 [for="league2"] {
+    background: #333;
+    color: #fff;
+}
+
+#league3:checked~.box1 [for="league3"] {
+    background: #333;
+    color: #fff;
+}
+
+#pos1:checked~.box1 [for="pos1"] {
+    background: #333;
+    color: #fff;
+}
+
+#pos2:checked~.box1 [for="pos2"] {
+    background: #333;
+    color: #fff;
+}
+
+#league1:checked~#pos1:checked~.box1 .items .item[data-league="league1"][data-pos="pos1"] {
+    display: block;
+}
+
+#league1:checked~#pos2:checked~.box1 .items .item[data-league="league1"][data-pos="pos2"] {
+    display: block;
+}
+
+#league2:checked~#pos1:checked~.box1 .items .item[data-league="league2"][data-pos="pos1"] {
+    display: block;
+}
+
+#league2:checked~#pos2:checked~.box1 .items .item[data-league="league2"][data-pos="pos2"] {
+    display: block;
+}
+
+#league3:checked~#pos1:checked~.box1 .items .item[data-league="league3"][data-pos="pos1"] {
+    display: block;
+}
+
+#league3:checked~#pos2:checked~.box1 .items .item[data-league="league3"][data-pos="pos2"] {
+    display: block;
+}
+
+
+.ranking .box2 {
+    text-align: center;
+    height: 800px;
+}
+
+.ranking .box2 .tit {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #898989;
+}
+
+.ranking .box2 label {
+    display: block;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ranking .box2 .ren {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s;
+}
+
+.ranking .box2 input:checked+label+.ren {
+    max-height: 400px;
+}
+
+
+
+
+
+/* 갤러리 */
+.gallery .box {
+    width: 1320px;
+    overflow: hidden;
+}
+
+.gallery .gSlider {
+    width: calc(264px * 8);
+    height: 600px;
+    transition: all .25s;
+    display: flex;
+}
+
+.gallery .slide {
+    width: 264px;
+    height: 600px;
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.gallery .item {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 150px;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #fff;
+    opacity: 0;
+}
+
+.gallery .slide:hover .item {
+    opacity: 1;
+}
+
+.gallery button {
+    background: none;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.gallery button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery .cSlider {
+    width: 400%;
+    display: flex;
+    margin-top: 40px;
+}
+
+.gallery .control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.gallery .control label {
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.gallery .control .n {
+    color: #b9b9b9;
+    border: 1px solid #b9b9b9;
+}
+
+.gallery .control .btn {
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.gallery .btn:hover {
+    color: #f99d1c;
+    border: 1px solid #f99d1c;
+}
+
+#g1:checked~.box .cSlider {
+    margin-left: 0;
+}
+
+#g2:checked~.box .cSlider {
+    margin-left: -100%;
+}
+
+#g3:checked~.box .cSlider {
+    margin-left: -200%;
+}
+
+#g4:checked~.box .cSlider {
+    margin-left: -300%;
+}
+
+#g1:checked~.box .gSlider {
+    margin-left: 0;
+}
+
+#g2:checked~.box .gSlider {
+    margin-left: calc(264px * -1);
+}
+
+#g3:checked~.box .gSlider {
+    margin-left: calc(264px * -2);
+}
+
+#g4:checked~.box .gSlider {
+    margin-left: calc(264px * -3);
+}
+
+
+
+/* 굿즈 */
+.goods .box {
+    display: flex;
+    gap: 20px;
+}
+
+.goods .box .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.goods .box .content2 {
+    margin-top: 150px;
+}
+
+.goods .item {
+    width: 350px;
+    height: 450px;
+    position: relative;
+}
+
+.goods .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.goods .itm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    cursor: move;
+    border-radius: 25px;
+}
+
+.goods .itm .bg {
+    z-index: -1;
+    inset: 0;
+    background-image: url(../images/40.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(2);
+    position: absolute;
+    transition: all .25s;
+}
+
+.goods .itm div:nth-child(1):hover~.bg {
+    background-position: 75px 75px;
+}
+
+.goods .itm div:nth-child(2):hover~.bg {
+    background-position: 0px 75px;
+}
+
+.goods .itm div:nth-child(3):hover~.bg {
+    background-position: -75px 75px;
+}
+
+.goods .itm div:nth-child(4):hover~.bg {
+    background-position: 75px 0px;
+}
+
+.goods .itm div:nth-child(5):hover~.bg {
+    background-position: 0px 0px;
+}
+
+.goods .itm div:nth-child(6):hover~.bg {
+    background-position: -75px 0px;
+}
+
+.goods .itm div:nth-child(7):hover~.bg {
+    background-position: 75px -75px;
+}
+
+.goods .itm div:nth-child(8):hover~.bg {
+    background-position: 0px -75px;
+}
+
+.goods .itm div:nth-child(9):hover~.bg {
+    background-position: -75px -75px;
+}
+
+/* 푸터 */
+footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 230px;
+    background: #333;
+    color: #898989;
+}
+
+footer .itemCont {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+}
+
+footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+footer .logo img {
+    width: 150px;
+}
+
+footer .item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: end;
+}
+
+footer .copy {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+/* ================ 서브 페이지 =================== */
+.sub1 .box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub1 .box .tit {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #898989;
+}
+
+.sub1 .box .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub1 .box .item .t {
+    font-size: 14px;
+}
+
+.sub1 .box2 {
+    display: flex;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.sub1 .box2 .item {
+    width: 300px;
+    height: 500px;
+    border: 3px solid #898989;
+    border-radius: 25px;
+}
+
+.sub1 .box2 .item .top {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub1 .box2 .item .top .circle {
+    border-radius: 25px;
+    width: 12px;
+    height: 12px;
+    background: #898989;
+}
+
+.sub1 .box2 .body {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.sub1 .box2 .body .tit {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #f99d1c;
+    margin-bottom: 10px;
+}
+
+.sub1 .box2 .body .t {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 오시는 길 */
+.sub1 .pc {
+    border: 1px solid #898989;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.sub1 .pc .top {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #898989;
+    display: flex;
+    align-items: center;
+}
+
+.sub1 .pc .top .item {
+    margin-left: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sub1 .pc .top .item .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+}
+
+.sub1 .pc .red {
+    background: red;
+}
+
+.sub1 .pc .yellow {
+    background: yellow;
+}
+
+.sub1 .pc .green {
+    background: rgb(47, 255, 57);
+}
+
+.sub1 .pc .body {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sub1 .pc .body .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub1 .pc .n {
+    font-size: 30px;
+    color: #f99d1c;
+    font-weight: lighter;
+}
+
+.sub1 .bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sub1 .bottom .line1 {
+    width: 15px;
+    height: 80px;
+    background: #898989;
+}
+
+.sub1 .bottom .line2 {
+    width: 150px;
+    height: 15px;
+    background: #898989;
+    border-radius: 25px;
+}
+
+
+/* =================== 서브02 페이지 ======================= */
+.sub2 .button {
+    display: flex;
+    border-bottom: 2px solid #f99d1c;
+    border-radius: 25px;
+}
+
+.sub2 .button .view {
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sub2 .active {
+    background: #333;
+    color: #fff;
+}
+
+.sub2 .top {
+    width: 100%;
+    border-bottom: 1px solid #898989;
+    margin-top: 30px;
+}
+
+.sub2 .item {
+    margin-bottom: 10px;
+    display: flex;
+    width: 66%;
+    justify-content: space-between;
+}
+
+.sub2 .days {
+    display: flex;
+}
+
+.sub2 .day {
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.sub2 .tabs {
+    display: flex;
+}
+
+.sub2 .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.sub2 .box {
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid #898989;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 40px;
+}
+
+
+
+.sub2 table {
+    opacity: 0;
+}
+
+.sub2 .box th,
+td {
+    border: 1px solid #e4e4e4;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+
+/* ========================= 서브04 ======================== */
+.sub4 .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub4 .top .button {
+    display: flex;
+    gap: 10px;
+}
+
+.sub4 .button .btn {
+    display: flex;
+    border-bottom: 2px solid #f99d1c;
+    border-radius: 25px;
+}
+
+.sub4 .button .b {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sub4 .active {
+    background: #333;
+    color: #fff;
+}
+
+.sub4 .box {
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.sub4 .box .item {
+    margin-bottom: 50px;
+    border: 1px solid #e4e4e4;
+    border-radius: 0 0 15px 15px;
+}
+
+.sub4 .item img {
+    width: 300px;
+    height: 370px;
+    object-fit: cover;
+}
+
+.sub4 .item .tit {
+    background: #333;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+
+.sub4 .item .txt {
+    padding: 5px 10px;
+}
+
+/* 굿즈 수정제안 */
+.sub4 .back {
+    border: 1px solid #bbbbbb;
+    width: 100%;
+    height: 700px;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sub4 .imgBox {
+    width: 1000px;
+    border: 1px solid #e4e4e4;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.sub4 .right {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub4 .right p {
+    background: #e4e4e4;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.sub4 .top select {
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}

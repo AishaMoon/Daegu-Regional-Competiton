@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="css1/style.css">
+</head>
+
+<body>
+
+
+
+    <!-- 헤더 -->
+    <header>
+        <div class="itemCont">
+            <div class="logo">
+                <img src="logo1.png" alt="img">
+            </div>
+
+            <div class="menu">
+                <ul class="item">
+                    <li><a href="sub01.html">Information</a></li>
+                    <li><a href="sub02.html">Statistics</a></li>
+                    <li><a href="sub03.html">Reversation</a></li>
+                    <li><a href="sub04.html">Goods</a></li>
+                </ul>
+            </div>
+
+            <div class="logout">
+                <a href="loginPage.php">로그인</a>
+                <div class="line"></div>
+                <a href="join.php">회원가입</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- 회원가입 -->
+    <div class="sign s1">
+        <h1>회원가입</h1>
+        <div class="back">
+            <div class="modal">
+                <div class="id">
+                    <input type="text" name="id" id="id" placeholder="아이디">
+                    <button>아이디 중복 확인</button>
+                </div>
+                <input type="text" name="name" id="name" placeholder="이름">
+                <input type="password" name="password" id="pass" placeholder="비밀번호">
+                <input type="text" id="captcha" name="captcha" placeholder="캡챠">
+
+                <div class="btn">
+                    <button>가입하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 로그인 -->
+    <div class="log s1">
+        <h1>로그인</h1>
+        <div class="back">
+            <div class="modal">
+                <input type="text" name="id" id="id" placeholder="아이디">
+                <input type="password" name="password" id="pass" placeholder="비밀번호">
+                <select name="memeber" id="memeber">
+                    <option value="회원구분" hidden>회원구분</option>
+                    <option value="관리자">관리자</option>
+                    <option value="담당자">담당자</option>
+                    <option value="일반회원">일반회원</option>
+                </select>
+                <div class="btn">
+                    <button>로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="itemCont">
+            <div class="logo">
+                <img src="logo2.png" alt="logo">
+            </div>
+            <div class="item">
+                <div class="text">
+                    <p>Call: 142-3677</p>
+                    <p>Email: help@skillsbaseballpark.com</p>
+                    <p>Address: (12345) 서울특별서 중구 중북로 71</p>
+                </div>
+                <div class="copy">
+                    <p>Copyrightⓒ Skills baseball park. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

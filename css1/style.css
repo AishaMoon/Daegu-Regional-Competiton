@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1320px;
+}
+
+.title {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 60px;
+    align-items: baseline;
+}
+
+.title .circleBox {
+    width: 23px;
+    height: 23px;
+    position: relative;
+}
+
+.title .circle {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 2px solid #f99d1c;
+    box-shadow: 2px 0 0;
+    border-radius: 25px;
+}
+
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #f99d1c;
+    position: fixed;
+    background: #fff;
+    z-index: 9999;
+    top: 0;
+}
+
+header .itemCont {
+    width: 1200px;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+header .itemCont .logo img {
+    width: 150px;
+}
+
+header .itemCont .item {
+    display: flex;
+    gap: 40px;
+}
+
+header a {
+    color: #333;
+}
+
+header .item a {
+    font-weight: bolder;
+    padding: 10px 20px;
+}
+
+header .item li {
+    position: relative;
+}
+
+header .item li::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    top: 28px;
+    transform: scaleX(0);
+    transition: all .25s;
+}
+
+header .item li:hover::before {
+    transform: scaleX(1);
+}
+
+header .logout {
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+}
+
+header .line {
+    width: 1px;
+    height: 15px;
+    background: #f99d1c;
+}
+
+
+
+
+/* 회원가입 */
+.s1 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.s1 h1 {
+    font-weight: bolder;
+    color: #454545;
+}
+
+.s1 .back {
+    /* background: #e4e4e4; */
+    border: 1px solid #333;
+    border-radius: 15px;
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+}
+
+.s1 .back form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+.s1 .modal input,
+select {
+    padding: 10px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #333;
+}
+
+.s1 .modal input:focus {
+    outline: none;
+}
+
+.s1 .modal .id {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s1 .modal .id button {
+    background: #fff;
+    border: 1px solid #333;
+    font-size: 12px;
+    /* border-radius: 25px; */
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.s1 .modal .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.s1 .modal .btn button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background: #333;
+    color: #fff;
+    align-items: center;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.log .back {
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 */
+footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 230px;
+    background: #333;
+    color: #898989;
+}
+
+footer .itemCont {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+}
+
+footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+footer .logo img {
+    width: 150px;
+}
+
+footer .item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: end;
+}
+
+footer .copy {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
